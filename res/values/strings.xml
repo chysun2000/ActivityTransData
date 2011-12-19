@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, ActivityTransDataActivity!</string>
+    <string name="app_name">ActivityTransData</string>
+    <string name="pass_data_by_intent">Pass Data By Intent</string>
+    <string name="pass_data_by_app_data">Pass Data By Application Data</string>
+    <string name="activity_pass_data">Activity received data from Intent</string>
+    <string name="about">About This Example</string>
+    <string name="about_example">
+        This example will show how to pass data between activities.\n
+        (1) Pass data by intent\n
+         (2) Pass data by Application Data\n
+    </string>
+    <string name="close_about">Close</string>
+    <string name="close_app">Exit</string>
+    <string name="pass_data_button">Pass Data</string>
+</resources>

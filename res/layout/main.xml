@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" android:padding="10dip">
+        <Button
+            android:id="@+id/pass_data_by_indent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pass_data_by_intent"/>
+        
+ 		 <Button
+ 		     android:id="@+id/pass_data_by_app_data"
+ 		     android:layout_width="match_parent"
+ 		     android:layout_height="wrap_content"
+ 		     android:text="@string/pass_data_by_app_data" />
+
+ 		 <Button
+ 		     android:id="@+id/about"
+ 		     android:layout_width="match_parent"
+ 		     android:layout_height="wrap_content"
+ 		     android:text="@string/about"/>
+
+ 		 <Button
+ 		     android:id="@+id/exit_app"
+ 		     android:layout_width="match_parent"
+ 		     android:layout_height="wrap_content"
+ 		     android:text="@string/close_app" />
+
+</LinearLayout>
