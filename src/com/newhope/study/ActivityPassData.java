@@ -24,8 +24,26 @@ public class ActivityPassData extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pass_data);
+        TextView tv = (TextView)this.findViewById(id.textView1);
+        
         Intent i = this.getIntent();
-        ArrayList<DataToPass> Datas = (ArrayList<DataToPass>)i.getSerializableExtra("data");
+        ArrayList<DataToPass> Datas = null;
+        int flags = i.getIntExtra(TransType.MSG_TYPE, 0x00);
+        switch(flags) {
+        case TransType.SEND_DATA_INTENT:
+        	tv.setText("Pass Data By Intent Extra");
+        	Datas = (ArrayList<DataToPass>)i.getSerializableExtra("data");
+        	break;
+        case TransType.SEND_DATA_APPLI:
+        	MyApplication app = (MyApplication)this.getApplication();
+        	if (app != null) {
+        		tv.setText("Pass Data By Application Member");
+        		Datas = app.getDataToPass();
+        	}
+        	break;
+        default:
+        		return;
+        }
         
         if (Datas != null) {
         	this.adapter = new DataAdapter(this, R.layout.intent_data_item, R.id.list_item_text, Datas);

@@ -45,11 +45,15 @@ public class ActivityTransDataActivity extends Activity implements OnClickListen
     	}
     	
     	i.putExtra("data", passDatas);
+    	i.putExtra(TransType.MSG_TYPE, TransType.SEND_DATA_INTENT);
     	startActivity(i);
     }
     
     private void passDataByAppDataExample() {
     	Log.d(TAG, "-->passDataByAppDataExample");
+    	Intent i = new Intent(this, ActivityPassData.class);
+    	i.putExtra(TransType.MSG_TYPE,TransType.SEND_DATA_APPLI);
+    	startActivity(i);
     }
     
     public void onClick(View v) {

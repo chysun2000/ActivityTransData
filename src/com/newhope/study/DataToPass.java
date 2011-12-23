@@ -2,7 +2,12 @@ package com.newhope.study;
 
 import java.io.Serializable;
 
-public class DataToPass implements Serializable {
+public class DataToPass implements Serializable {	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3887047275111883623L;
+	
 	private String pair = "";
 	private String value = "";
 	
